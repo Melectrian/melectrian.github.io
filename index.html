@@ -51,8 +51,12 @@
     }
 
     .no-stuff {
-        margin: 0px;
         padding: 0px;
+    }
+
+    .img-ph {
+        width: 100%;
+        height: auto;
     }
 
 	</style>
@@ -93,7 +97,7 @@
         </div>
         </nav>
 
-        <div class="container-fluid">
+        <div class="container-fluid hidden-xs">
 
             <div class="row">
 
@@ -116,16 +120,123 @@
 
             </div>
 
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
+        <div id="accordion" class="panel-group visible-xs">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. What is Twitter Bootstrap?</a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>Twitter Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. What is CSS?</a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="http://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div class="container-fluid">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
+<!--
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li>
+                    <div class="div-element">
+                        <a href="#">Home</a>
+                    </div>
+                    
+                </li>
+                <li>
+                    <div class="div-element">
+                        <a href="#">Profile</a>
+                    </div>
+                    
+                </li>
+                <li>
+                    <div class="div-element"s>
+                        <a href="#">Messages</a>
+                    </div>
+                    
+                </li>
             </ul>
         </div>
+
+    .nav-pills > li {
+        float:none;
+        display:inline-block;
+    }
+
+    .nav-pills {
+        text-align:center;
+    }
+
+    .div-element {
+        width: 200px;
+        height: auto;
+        background-color: rgb(0,128,64);
+    }
+
+-->
 
 </body>
 
