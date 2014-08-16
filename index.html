@@ -6,6 +6,7 @@
 		Test file please ignore
 	</title>
 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 <!--
@@ -20,43 +21,58 @@
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/sticky-footer.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 
 	<style type="text/css">
 
-    p {
-        text-align: center;
-    }
-
-    img {
-        padding: 5px;
-    }
-
-    .img-normal {
+    .flex-image {
         width: 100%;
         height: auto;
     }
 
-    .img-center {
+    .custom-tab-title {
+        text-align: center;
+        color: rgb(255,255,255);
+        background-color: rgb(0,0,0);
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .gallery-tab {
+        
+    }
+
+    .gallery-tab-inner {
         display: block;
         margin-right: auto;
         margin-left: auto;
+        max-width: 350px;
+        height: 100%;
     }
 
-    .img-max-size {
-        max-width: 300px;
-        max-height: 168px;
+    .gallery-content-inner {
+        sdisplay: block;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 425px;
+        height: 100%;
     }
 
-    .no-stuff {
-        padding: 0px;
+    .gallery-content {
+        background-color: #7F7F7F;
     }
 
-    .img-ph {
-        width: 100%;
-        height: auto;
+    .test-fix {
+        max-width: 200px;
+        height: 200px;
+        background-color: #7F7F7F;
+    }
+
+    .navbar {
+        border-radius: 0px;
     }
 
 	</style>
@@ -65,178 +81,142 @@
 
 <body>
 
+    <div id="wrap">
+
         <div class="container-fluild">
-                <img class="img-normal no-stuff" src="photo/banner.jpg">
+            <img class="flex-image" src="photo/banner.jpg">
         </div>
 
-        <nav role="navigation" class="navbar navbar-inverse div-margin">
-        <div class="container-fluid">
+        <nav role="navigation" class="navbar navbar-inverse">
+            <div class="container-fluid">
 
-            <div class="navbar-header">
-                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="#" class="navbar-brand">Brand</a>
+                <div class="navbar-header">
+                        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">Brand</a>
+                    </div>
+
+
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Messages</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Login</a></li>
+                        </ul>
                 </div>
 
-
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Messages</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Login</a></li>
-                    </ul>
             </div>
-
-        </div>
         </nav>
 
-        <div class="container-fluid hidden-xs">
+        <div class="container-fluid">
 
             <div class="row">
 
-                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <p>Placeholder heading</p>
-                    <img src="photo/abstract-1.jpg" class="img-normal img-max-size img-center">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+
+                    <div class="gallery-tab-inner">
+                        <img src="photo/beach-tab.jpg" class="flex-image">
+                        <p class="custom-tab-title">Placeholder heading</p>
+                    </div>
+
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <p>Placeholder heading</p>
-                    <img src="photo/abstract-2.jpg" class="img-normal img-max-size img-center">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+
+                    <div class="gallery-tab-inner">
+                        <img src="photo/golf-tab.jpg" class="flex-image">
+                        <p class="custom-tab-title">Placeholder heading</p>
+                    </div>
+
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <p>Placeholder heading</p>
-                    <img src="photo/abstract-3.jpg" class="img-normal img-max-size img-center">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+
+                    <div class="gallery-tab-inner">
+                        <img src="photo/culture-tab.jpg" class="flex-image">
+                        <p class="custom-tab-title">Placeholder heading</p>
+                    </div>
+
                 </div>
-                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <p>Placeholder heading</p>
-                    <img src="photo/abstract-4.jpg" class="img-normal img-max-size img-center">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+
+                    <div class="gallery-tab-inner">
+                        <img src="photo/spa-tab.jpg" class="flex-image">
+                        <p class="custom-tab-title">Placeholder heading</p>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="row">
+            <!-- -->
+
+            <div class="row gallery-content">
 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="row">
+                        
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                            <div class="gallery-content-inner">
+                                <img class="flex-image" src="photo/img-placeholder.jpg">
+                                <p>In alteration insipidity impression by travelling reasonable up motionless. Of regard warmth by unable sudden garden ladies.</p>
+                            </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                            <div class="gallery-content-inner">
+                                <img class="flex-image" src="photo/img-placeholder.jpg">
+                                <p>In alteration insipidity impression by travelling reasonable up motionless. Of regard warmth by unable sudden garden ladies.</p>
+                            </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                            <div class="gallery-content-inner">
+                                <img class="flex-image" src="photo/img-placeholder.jpg">
+                                <p>In alteration insipidity impression by travelling reasonable up motionless. Of regard warmth by unable sudden garden ladies.</p>
+                            </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                            <div class="gallery-content-inner">
+                                <img class="flex-image" src="photo/img-placeholder.jpg">
+                                <p>In alteration insipidity impression by travelling reasonable up motionless. Of regard warmth by unable sudden garden ladies.</p>
+                            </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                            <div class="gallery-content-inner">
+                                <img class="flex-image" src="photo/img-placeholder.jpg">
+                                <p>In alteration insipidity impression by travelling reasonable up motionless. Of regard warmth by unable sudden garden ladies.</p>
+                            </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
+                            <div class="gallery-content-inner">
+                                <img class="flex-image" src="photo/img-placeholder.jpg">
+                                <p>In alteration insipidity impression by travelling reasonable up motionless. Of regard warmth by unable sudden garden ladies.</p>
+                            </div>
                         </div>
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <img class="img-ph" src="photo/img-placeholder.jpg">
-                        </div>
+                        
                     </div>
                 </div>
-
+                    
             </div>
+
+            <!-- -->
 
         </div>
 
-        <div id="accordion" class="panel-group visible-xs">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
-                    </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. What is Twitter Bootstrap?</a>
-                    </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        <p>Twitter Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. What is CSS?</a>
-                    </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="http://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
-<!--
+    <div id="push">
+        
+    </div>
+
+    <div id="footer">
         <div class="container">
-            <ul class="nav nav-pills">
-                <li>
-                    <div class="div-element">
-                        <a href="#">Home</a>
-                    </div>
-                    
-                </li>
-                <li>
-                    <div class="div-element">
-                        <a href="#">Profile</a>
-                    </div>
-                    
-                </li>
-                <li>
-                    <div class="div-element"s>
-                        <a href="#">Messages</a>
-                    </div>
-                    
-                </li>
-            </ul>
         </div>
-
-    .nav-pills > li {
-        float:none;
-        display:inline-block;
-    }
-
-    .nav-pills {
-        text-align:center;
-    }
-
-    .div-element {
-        width: 200px;
-        height: auto;
-        background-color: rgb(0,128,64);
-    }
-
--->
+    </div>
 
 </body>
 
