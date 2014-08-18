@@ -22,11 +22,27 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/sticky-footer.css">
+    <link rel="stylesheet" href="css/custom-nav.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-
 	<style type="text/css">
+
+    body {
+        background: url('photo/cover-bg.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #page-header {
+    }
+
+    .logo-image {
+        width: 100%;
+        height: auto;
+    }
 
     .flex-image {
         width: 100%;
@@ -36,25 +52,23 @@
     .custom-tab-title {
         text-align: center;
         color: rgb(255,255,255);
-        background-color: rgb(0,0,0);
-        margin-top: 10px;
+        background-color: rgb(0,0,0); 
         padding: 15px;
+        margin-bottom: 0;
     }
 
-    .gallery-tab {
-        
+    .gallery-header {
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .gallery-tab-inner {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 350px;
-        height: 100%;
+        max-width: 500px;
+        height: auto;
     }
 
     .gallery-content-inner {
-        sdisplay: block;
+        display: block;
         margin-right: auto;
         margin-left: auto;
         max-width: 425px;
@@ -62,17 +76,27 @@
     }
 
     .gallery-content {
-        background-color: #7F7F7F;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 50px;
+        background-color: rgba(0,0,0,0.5);
     }
 
-    .test-fix {
-        max-width: 200px;
-        height: 200px;
-        background-color: #7F7F7F;
+    .no-space {
+        padding: 0;
+        margin: 0;
     }
 
-    .navbar {
-        border-radius: 0px;
+    .div-red {
+        background-color: red;
+    }
+
+    .div-blue {
+        background-color: blue;
+    }
+
+    .div-green {
+        background-color: green;
     }
 
 	</style>
@@ -83,13 +107,21 @@
 
     <div id="wrap">
 
-        <div class="container-fluild">
-            <img class="flex-image" src="photo/banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <img src="photo/logo.jpg" class="logo-image">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <div id="page-header">
+                        <h1>Page Header</h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <nav role="navigation" class="navbar navbar-inverse">
-            <div class="container-fluid">
-
+        <div class="container">
+            <nav role="navigation" class="navbar navbar-inverse">
                 <div class="navbar-header">
                         <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                             <span class="sr-only">Toggle navigation</span>
@@ -111,46 +143,45 @@
                             <li><a href="#">Login</a></li>
                         </ul>
                 </div>
+            </nav>
+        </div>
 
-            </div>
-        </nav>
+        <div class="container">
 
-        <div class="container-fluid">
+            <div class="row gallery-header">
 
-            <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-space">
 
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+                            <div class="gallery-tab-inner">
+                                <img src="photo/beach-tab.jpg" class="flex-image">
+                                <p class="custom-tab-title">Placeholder heading</p>
+                            </div>
 
-                    <div class="gallery-tab-inner">
-                        <img src="photo/beach-tab.jpg" class="flex-image">
-                        <p class="custom-tab-title">Placeholder heading</p>
-                    </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-space">
 
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+                            <div class="gallery-tab-inner">
+                                <img src="photo/golf-tab.jpg" class="flex-image"> 
+                                <p class="custom-tab-title">Placeholder heading</p>
+                            </div>
 
-                    <div class="gallery-tab-inner">
-                        <img src="photo/golf-tab.jpg" class="flex-image">
-                        <p class="custom-tab-title">Placeholder heading</p>
-                    </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-space">
 
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+                            <div class="gallery-tab-inner">
+                                <img src="photo/culture-tab.jpg" class="flex-image">
+                                <p class="custom-tab-title">Placeholder heading</p>
+                            </div>
 
-                    <div class="gallery-tab-inner">
-                        <img src="photo/culture-tab.jpg" class="flex-image">
-                        <p class="custom-tab-title">Placeholder heading</p>
-                    </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-space">
 
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gallery-tab">
+                            <div class="gallery-tab-inner">
+                                <img src="photo/spa-tab.jpg" class="flex-image">
+                                <p class="custom-tab-title">Placeholder heading</p>
+                            </div>
 
-                    <div class="gallery-tab-inner">
-                        <img src="photo/spa-tab.jpg" class="flex-image">
-                        <p class="custom-tab-title">Placeholder heading</p>
-                    </div>
-
-                </div>
+                        </div>
 
             </div>
 

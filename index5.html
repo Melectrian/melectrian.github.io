@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>
+		Test file please ignore
+	</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/sticky-footer.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jqcolor.js"></script>
+
+	<style type="text/css">
+
+    div {
+        background-color: #0099FF;
+        width: 400px;
+        height: 400px;
+    }
+
+	</style>
+
+</head>
+
+<body>
+
+<div id="block"></div>
+
+    <script type="text/javascript">
+
+        $("#block").mouseover(function() {
+            $("#block").stop();
+            $("#block").animate({
+                    backgroundColor: "#0099FF"
+            }, 300 );
+        });
+
+        $("#block").mouseout(function() {
+            $("#block").stop();
+            $("#block").animate({
+                    backgroundColor: "#33CC33"
+            }, 300 );
+        });
+
+    </script>
+
+</body>
+
+</html>
