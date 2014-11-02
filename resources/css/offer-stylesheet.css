@@ -1,0 +1,287 @@
+    <style type="text/css">
+
+    @font-face {
+        font-family: Building;
+        src: url("Building_Typeface.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-BOLD;
+        src: url("MYRIADPRO-BOLD.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-BOLDCOND;
+        src: url("MYRIADPRO-BOLDCOND.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-BOLDCONDIT;
+        src: url("MYRIADPRO-BOLDCONDIT.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-BOLDIT;
+        src: url("MYRIADPRO-BOLDIT.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-COND;
+        src: url("MYRIADPRO-COND.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-CONDIT;
+        src: url("MYRIADPRO-CONDIT.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-REGULAR;
+        src: url("MYRIADPRO-REGULAR.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-SEMIBOLD;
+        src: url("MYRIADPRO-SEMIBOLD.OTF") format("opentype");
+    }
+
+    @font-face {
+        font-family: MYRIADPRO-SEMIBOLDIT;
+        src: url("MYRIADPRO-SEMIBOLDIT.OTF") format("opentype");
+    }
+
+    /*
+        Bootstrap style override
+    */
+
+    .container-fluid {
+        padding-right: 0; 
+        padding-left: 0;
+    }
+
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, 
+    .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, 
+    .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, 
+    .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, 
+    .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, 
+    .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, 
+    .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, 
+    .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, 
+    .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, 
+    .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, 
+    .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, 
+    .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        padding-right: 0; 
+        padding-left: 0;
+    }
+
+    .navbar {
+        min-height: 77px;
+        margin-bottom: 0;
+    }
+
+    .navbar-nav li a {
+        line-height: 77px;
+        height: 77px;
+        padding-top: 0;
+    }
+
+    .navbar-brand {
+        padding: 5px;
+        height: 77px;
+    }
+
+    .navbar-toggle {
+        margin-top: 21px;
+        margin-bottom: 21px;
+    }
+
+    .navbar-header {
+        height: 77px;
+    }
+
+    .navbar-default {
+        border: 0;
+        border-radius: 0px;
+        background-repeat: no-repeat;
+        background-color: #FFF;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow:    none;
+        box-shadow:         none;
+
+        -webkit-background-image: none;
+        -moz-background-image: none;
+        background-image: none;
+    }
+
+    .brand-logo {
+        width: 100%;
+        height: auto;
+    }
+
+    /*
+        Footer syling
+    */
+
+    .footer-logo {
+        text-align: center;
+        margin: 20px 20px 10px 20px;
+    }
+
+    .footer-social {
+        text-align: center;
+        margin: 10px 20px 70px 20px;
+    }
+
+    .footer-margin {
+        margin: 100px 0;
+    }
+
+    .footer-note {
+        color: #676767;
+        text-align: center;
+    }
+
+    .footer-note h2 {
+        font-family: MYRIADPRO-BOLD;
+    }
+
+    .footer-note p {
+        font-family: MYRIADPRO-REGULAR;  
+    }
+
+    @media(max-width:767px) {
+        .footer-note h2 {
+            font-size: xx-large;
+        }
+
+        .footer-note p {
+            font-size: x-large;   
+        }
+    }
+
+    @media(min-width:768px) {
+        .footer-note h2 {
+            font-size: x-large;
+        }
+
+        .footer-note p {
+            font-size: large;   
+        }
+    }
+
+    @media(min-width:992px) {
+        .footer-note h2 {
+            font-size: large;
+        }
+
+        .footer-note p {
+            font-size: medium;
+        }
+    }
+
+    @media(min-width:1200px) {
+        .footer-note h2 {
+            font-size: large;
+        }
+
+        .footer-note p {
+            font-size: medium;   
+        }
+    }
+
+    .bottom-footer {
+        border-top: solid 1px #CCC;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .bottom-footer span {
+        color: #AAA;
+        padding: 5px;
+    }
+
+    /*
+        Offers styling
+    */
+
+    .offer-img {
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .offer-details {
+        margin: 20px;
+    }
+
+    .offer-content {
+        margin: 20px;
+    }
+
+    .offer-content span {
+        position: relative;
+        top: 2px;
+        margin-bottom: 20px;
+        color: #999;
+    }
+
+    .offer-content button {
+        width: 150px;
+        height: 50px;
+        text-shadow: 0 1px 0 #2F3036;
+        font-size: medium;
+
+        color: #2F3036;
+        background-color: #19C589;
+        border: 1px solid #CCC;
+
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .raty-box {
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .offer-price {
+        font-size: xx-large;
+    }
+
+    .offer-details table {
+        border: solid 1px #DDD;
+        margin: 0;
+    }
+
+    .table-mod {
+        float: right;
+    }
+
+    .table-color-mod {
+        background-color: #EEE;
+    }
+
+    .remove-table-border {
+        border-top: 0 !important;
+    }
+
+    .offer-shadow {
+        -moz-box-shadow:    0 0 20px 0 rgba(9,10,10, 0.8);
+        -webkit-box-shadow: 0 0 20px 0 rgba(9,10,10, 0.8);
+         box-shadow:        0 0 20px 0 rgba(9,10,10, 0.8);
+    }
+
+    .offer-spacing {
+        margin-bottom: 50px;
+    }
+
+    .golf-module-overview {
+        margin: 30px 10px;
+        font-family: MYRIADPRO-BOLD;
+    }
