@@ -1,0 +1,484 @@
+/*******************************
+GENERAL STYLING
+*******************************/
+
+* {
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+	color: #444;
+}
+	
+a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-weight: 700;
+	color: #00727F;
+}
+
+a:visited {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-weight: 700;
+	color: #00727F;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Header styling */
+
+header {
+	background-color: #D3D3D3;
+}
+
+header h1 {
+	color:  #444;
+	margin: 0;
+	padding: 20px 20px 0 20px;
+	font-size: 2em;
+	font-weight: 700;
+}
+
+header h2 {
+	margin: 0;
+	padding: 0 20px 20px 20px;
+	font-size: 1em;
+}
+
+nav {
+	border-top: solid 1px #009FB2;
+	border-bottom: solid 1px #009FB2;
+	font-family: Lobster, sans-serifs;
+	font-size: 1.2em;
+	background-color: #00B6CC;
+}
+
+nav a {
+	font-family: Lobster, sans-serifs;
+	font-size: 1.2em;
+	background-color: #00B6CC;	
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+nav ul li {
+	display: inline-block;
+	color: #444;
+	padding: 20px 10px;
+}
+
+nav ul #selected {
+	color: #FFF;
+}
+
+header #header-social {
+	display: none;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 600px) {
+
+	header #header-social {
+		display: block;
+		float: right;
+		padding: 20px;
+	}
+
+	header #header-social img {
+		max-width: 36px;
+	}	
+
+}
+
+/* Footer styling */
+
+footer {
+	padding: 20px;
+	background-color: #00B6CC;
+	border-top: solid 1px #009FB2;
+}
+
+footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: #FFFFFF;
+}
+
+footer #footer-about h3 {
+	margin: 0 0 5px 0;
+	font-weight: 700;
+}
+
+footer #footer-about p {
+	margin: 0;
+}
+
+footer #footer-contact {
+	text-align: center;
+	margin: 20px 0;
+}
+
+footer #footer-contact h3 {
+	margin: 0 0 5px 0;
+	font-weight: 700;
+}
+
+footer #footer-contact p {
+	margin: 0;
+}
+
+footer #footer-social {
+	text-align: center;
+}
+
+footer #footer-social img {
+	max-width: 48px;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 600px) {
+
+	footer ul li {
+		float: right;
+		width: 49%;
+	}
+
+	footer ul li:first-child {
+		float: left;
+	}
+
+	footer #footer-about {
+		margin: 0 20px 0 0;
+	}
+
+	footer #footer-contact {
+		margin: 10px 20px;
+	}
+
+	footer #footer-social {
+		margin: 10px 20px;
+	}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+	footer ul li {
+		float: left;
+		width: 33%;
+	}
+
+	footer #footer-about {
+		margin: 0 20px 0 0;
+	}
+
+	footer #footer-contact {
+		margin: 0 20px;
+	}
+
+	footer #footer-social {
+		margin: 0 0 20px 0;
+	}
+
+	/* Sticky footer */
+
+	/* Strech the body to fill the full height of the window */
+	
+	html, body {
+		height: 100%;
+	}
+
+	/* Create a wrapper element inside the body and set its height to that of the body. 
+	Push the wrapper by a set amout from the bottom of the page. */
+
+	#page-wrapper {
+		min-height: 100%;
+		margin-bottom: -160px;
+	}
+
+	/* Create an empty element after the wrapper */
+
+	#page-wrapper:after {
+		content: "";
+		display: block;
+	}
+
+	/* Set the height of the footer and the empty element by the same amount equal to the 
+	bottom offset of the wrapper. */ 
+
+	footer, #page-wrapper:after {
+		height: 169px;
+	}
+
+}
+
+/*******************************
+INDEX STYLING
+*******************************/
+
+#description {
+	max-width: 80%;
+	padding: 5% 10%;
+	text-align: center;
+	background-color: #E3E3E3;
+	border-top: solid 1px #D3D3D3;
+	border-bottom: solid 1px #D3D3D3; 
+}
+
+#description h1 {
+	margin: 0;
+	font-size: 2.5em;
+}
+
+#description p {
+	margin: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
+
+#logo-line {
+	max-width: 80%;
+	margin: 5% auto 0;
+}
+
+#logo-line .logo-element {
+	display: inline-block;
+	padding: 3% 1.5%; 
+}
+
+#logo-line .logo-element img {
+	max-height: 70px;
+	text-align: center;
+}
+
+#logo-line .logo-element p {
+	text-align: center;
+}
+
+#arrow p {
+	margin-top: 50px;
+	font-size: 2em;
+}
+
+#arrow img {
+	width: 100px;
+}
+
+/* Gallery style */
+
+#gallery {
+	max-width: 80%;
+	margin: 100px auto;
+}
+
+#gallery h2 {
+	font-family: Lobster;
+	text-align: center;
+}
+
+.gallery-item {
+	display: inline-block;
+	margin: 2%;
+	width: 98%;
+}
+
+.item-image {
+	position: relative;
+	-webkit-box-shadow: 0px 0px 10px #777;
+	box-shadow: 0px 0px 10px #777;
+}
+
+.item-image img {
+	display: block;
+	max-width: 100%;
+}
+
+.item-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 5%;
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,0.0);
+}
+
+.item-description {
+	margin: 2px 0 0 0;
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+}
+
+
+
+/* Media queries */
+
+@media screen and (min-width: 600px) {
+
+	.gallery-item {
+		width: 45%;
+	}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+	.gallery-item {
+		width: 28%;
+	}
+
+}
+
+
+/*******************************
+ABOUT STYLING
+*******************************/
+
+#about-wrapper {
+	max-width: 80%;
+	margin: 10% auto;
+}
+
+.about-head {
+	margin: 25px 0;
+	padding: 10px;
+	background-color: #E3E3E3;
+	border-bottom: solid 3px #D3D3D3;
+	border-right: solid 3px #D3D3D3;
+
+}
+
+.about-head h1 {
+	margin: 10px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.about-head p {
+	font-size: 1.1em;
+
+}
+
+.about-head img {
+	display: block;
+	margin: 20px auto;
+	max-width: 200px;
+	border-radius: 2px;
+	box-shadow: 0 9px 8px -6px #555;
+}
+
+.about-content {
+	float: left;
+	padding: 5% 2%;
+}
+
+.about-content p {
+text-align: center;
+}
+
+#about-wrapper .logo-line {
+	margin: auto;
+	text-align: center;
+}
+
+.logo-line .logo-element {
+	box-sizing: border-box;
+	display: inline-block;
+	max-width: 32%;
+	padding: 2%;
+}
+
+.logo-line .logo-element img {
+	max-width: 48px;
+}
+
+.logo-line .logo-element p {
+	font-family: Lato, sans-serifs;
+	font-size: 1em;
+	margin: 10px 0 5px;
+}
+
+@media screen and (min-width: 600px) {
+
+	#about-wrapper {
+		max-width: 70%;
+		margin: 15% auto;
+	}
+
+	.about-head img {
+		display: inline;
+		float: left;
+		margin: 10px 20px 10px 10px;
+	}
+
+	.about-content {
+		display: inline-block;
+		box-sizing: border-box;
+		max-width: 49.5%;
+	}
+
+}
+
+/*******************************
+CONTACT STYLING
+*******************************/
+
+.contact-wrapper {
+	max-width: 80%;
+	margin: 15% 10% 20%;
+}
+
+.contact-wrapper h2 {
+	font-weight: 700;
+	margin: 0;
+}
+
+.contact-wrapper p {
+	margin: 5px 0;
+}
+
+.contact {
+	border-bottom: solid 3px #D3D3D3;
+	border-right: solid 3px #D3D3D3;
+	margin-top: 20px;
+	background: #E3E3E3;
+	padding: 5px;
+}
+
+.contact img {
+	width: 64px;
+	vertical-align: middle;
+}
+
+.contact span {
+	vertical-align: middle;
+	font-weight: 700;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 600px) {
+
+
+
+}
