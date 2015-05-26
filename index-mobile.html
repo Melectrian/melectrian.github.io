@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Mobile</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,600,300|Roboto:500,700,400|Pacifico' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style type="text/css">
+
+	* {
+		box-sizing: border-box;
+		color: #555;
+	}
+
+	.clearfix {
+		display: table;
+		content: '';
+		clear: both;
+		width: 100%;
+	}
+
+	button {
+		padding: 5px 25px;
+		border: 3px solid #F38630; /* alternate: #FA6900 */
+		background-color: transparent;
+		font-family: Roboto;
+		font-weight: 700;
+		font-size: 1.25rem;
+		text-transform: uppercase;
+	}
+
+	button:hover {
+		color: #FFF;
+		border-color: #F38630;
+		background-color: #F38630;
+	}
+
+	input[type="text"] {
+		display: inline;
+		font-family: 'Open Sans';
+		font-size: 1rem;
+		font-weight: 400;
+		width: 80%;
+		max-width: 300px;
+		border: 1px solid #F38630;
+		background-color: transparent;
+		border-radius: 7px;
+		padding: 7px;
+		margin: 0 auto;
+		outline-width: 0;
+	}
+
+	hr {
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, 
+		rgba(0, 0, 0, 0), 
+		rgba(0, 0, 0, 0.75), 
+		rgba(0, 0, 0, 0));
+	}
+
+	input[type="text"]::-webkit-input-placeholder {
+		color: #444;
+	}
+
+	p.brand {
+		font-family: 'Pacifico';
+		font-size: 2.5rem;
+		text-decoration: none;
+	}
+
+	body {
+		background-image: url(resources/img1.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		text-align: center;
+		background-color: rgba(255,255,255,0.7);
+		border-bottom: 1px solid #CCC;
+		box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+		z-index: 100;
+	}
+
+	header p.brand {
+		display: inline-block;
+		float: left;
+		margin: 8px 0 0 20px;
+	}
+
+	#rmb {
+		float: right;
+		max-width: 48px;
+		margin: 20px 20px 0 0;
+	}
+
+	header ul {
+		float: left;
+		width: 100%;
+		font-family: 'Roboto';
+		list-style: none;
+		border-top: 1px solid #CCC;
+		margin: 0;
+		padding: 20px 0;
+		text-align: center;
+		background-color: rgba(255,255,255,0.8);
+	}
+
+	header ul li {
+		font-size: 1.5rem;
+		font-weight: 700;
+		padding: 10px;
+		vertical-align: middle;
+		text-transform: uppercase;
+	}
+
+	header ul.ul-medium {
+		display: none;
+		float: none;
+		width: auto;
+		text-decoration: none;
+		background-color: transparent;
+	}
+
+	.search {
+		max-width: 72px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	header button.sign-in {
+		display: none;
+		float: right;
+		margin: 20px 20px 0 0;
+	}
+
+	ul.ul-medium li {
+		display: inline;
+	}
+
+	img#ms {
+		max-width: 36px;
+		height: auto;
+		vertical-align: middle;
+		margin-top: -6px;
+	}
+
+	.fold {
+		width: 100%;
+		min-height: 100vh;
+		background-image: url(resources/fold_bg.png);
+		background-size: cover;
+	}
+
+	.fold-description {
+		text-align: center;
+		margin: 0 10%;
+		padding: 120px 0 20%;
+	}
+
+	.fold-description h1 {
+		color: #000;
+		font-family: 'Roboto';
+		font-size: 2.25rem;
+		text-transform: uppercase;
+		word-spacing: 1rem;
+		margin: 0;
+	}
+
+	.fold-description h2 {
+		color: #000;
+		font-family: 'Pacifico';
+		font-weight: 300;
+		font-style: italic;
+		font-size: 1.5rem;
+		margin: 0;
+	}
+
+	.fold-description p:first-of-type {
+		margin: 50px 0 0 0;
+	}
+
+	.fold-description p.price {
+		color: #000;
+		margin: 0;
+		font-family: 'Open Sans';
+		font-size: 5.5rem;
+		font-weight: 700;
+		padding-left: 24.5px;
+	}
+
+	.fold-description p.price > span {
+		color: #000;
+		font-family: 'Open Sans';
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+
+	.fold-description p {
+		color: #000;
+		font-family: 'Open Sans';
+		font-size: 1.5rem;
+		margin: 0;
+	}
+
+	.fold-description img {
+		max-width: 128px;
+	}
+
+	.fold-description hr {
+		width: 300px;
+	}
+
+	#content {
+		width: 100%;
+		margin: 40% 0;
+		background-color: transparent;
+	}
+
+	#content-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.advert-item {
+		width: 100%;
+		background-color: #FFF;
+		padding: 30px;
+		margin-bottom: 50px;
+		border: 1px solid #CCC;
+		box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+		text-align: center;
+	}
+
+	.advert-item:nth-of-type(4n) {
+			margin-bottom: 0;
+	}
+
+	.advert-item h3 { 
+		font-family: 'Open Sans';
+		font-weight: 700;
+		font-size: 1.75rem;
+		margin: 0 0 10px 0;
+	}
+
+	.advert-item ul {
+		padding: 0;
+		margin: 0 auto;
+		list-style: none;
+		text-align: center;
+	}
+
+	.advert-item ul li {
+		padding: 20px 0 0 0;
+	}
+
+	.advert-item ul li img {
+		max-width: 24px;
+	}
+
+	.advert-item ul li p {
+		display: inline;
+		font-family: 'Open Sans';
+		font-weight: 400;
+		font-size: 1.15rem;
+	}
+
+	.advert-item span.price {
+		display: block;
+		margin: 20px;
+		font-family: 'Open Sans';
+		font-size: 2.5rem;
+		font-weight: 700;
+	}
+
+	.advert-item span.price span {
+		font-family: 'Open Sans';
+		font-size: 1.5rem;
+		font-weight: 400;
+	}	
+
+	.small-text {
+		color: #FFF;
+		font-family: 'Lato', 'Open Sans';
+		font-weight: 300;
+		font-style: italic;
+		font-size: 0.85rem;
+		margin-left: 1%;
+	}
+
+	.extra {
+		text-align: center;
+		padding: 20% 0;
+		background-color: rgba(255,255,255,0.8);
+		min-height: 100vh;
+	}
+
+	.extra-item {
+		padding: 10%;
+	}
+
+	.extra-item h3 {
+		font-family: 'Open Sans';
+		font-size: 2rem;
+		margin: 0 0 10px 0;
+	}
+
+	.extra-item p {
+		font-family: 'Open Sans';
+		font-weight: 300;
+		font-size: 1.25rem;
+	}
+
+	footer {
+		padding: 5%;
+		background-color: rgba(255,255,255,0.8);
+	}
+
+	footer hr {
+		width: 350px;
+	}
+
+	footer .footer-item {
+		padding-top: 5%;
+		text-align: center;
+	}
+
+	footer p {
+		font-family: 'Open Sans';
+		font-size: 1.25rem;
+		text-align: center;
+		font-style: italic;
+	}
+
+	footer .footer-item .brand {
+		margin: 0;
+	}
+
+	footer .footer-item img {
+		max-width: 72px;
+	}
+
+	p.copyright {
+		font-family: 'Open Sans';
+		font-size: 0.9rem;
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	@media screen and (min-width: 768px) {
+
+		.fold-description {
+			padding: 130px 0 100px;
+		}
+
+		#content {
+			margin: 30% 0;
+		}
+
+		#content-wrapper {
+			width: 70%;
+		}
+
+		.extra {
+			padding: 10% 0;
+		}
+
+	}
+
+	@media screen and (min-width: 992px) {
+
+		header ul.ul-medium {
+			display: inline-block;
+		}
+
+		header button.sign-in {
+			display: inline-block;
+		}
+
+		header #rmb {
+			display: none;
+		}
+
+		#rm li:nth-child(-n+5) {
+			display: none;
+		}
+
+		.fold-description {
+			padding: 130px 0 50px;
+		}
+
+		#content {
+			margin: 25% 0;
+		}
+
+		#content-wrapper {
+			width: 80%;
+		}
+
+		.advert-item {
+			float: left;
+			width: 46%;
+			margin: 2%;
+		}
+
+		.advert-item:nth-of-type(3n), .advert-item:nth-of-type(4n) {
+			margin-bottom: 0;
+		}
+
+		.extra {
+			padding: 2% 0;
+			min-height: 0px;
+		}
+
+		.extra-item {
+			float: left;
+			width: 50%;
+			padding: 5% 10%;
+		}
+
+		.footer-item {
+			float: left;
+			width: 33.33%;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+
+		.fold-description {
+			padding: 200px 0 70px;
+		}
+
+		#content {
+			margin: 20% 0;
+		}
+
+		#content-wrapper {
+			width: 70%;
+		}
+	}
+
+	</style>
+
+</head>
+	<body>
+
+		<header>
+			<p class="brand">Brand</p>
+			<ul class="ul-medium">
+				<li>Home</li>
+				<li>Services</li>
+				<li>Contact Us</li>
+				<li>About Us</li>
+				<li><img id="ms" src="resources/search-icon.png"></li>
+			</ul>
+			<button class="sign-in">Digital Book</button>
+			<img id="rmb" src="resources/resp-menu-button.png">
+			<div class="clearfix"></div>
+
+			<ul id="rm">
+				<li>Home</li>
+				<li>Services</li>
+				<li>Contact Us</li>
+				<li>About Us</li>
+				<li><img class="search" src="resources/search-icon.png"></li>
+				<li><input type="text" placeholder="Username"></li>
+				<li><input type="text" placeholder="Password"></li>
+				<li><button>Login</button></li>
+			</ul>
+			<div class="clearfix"></div>
+		</header>
+
+		<section class="fold">
+
+			<div class="fold-description">
+				<h1>Housekeeping Services Varna</h1>
+				<h2>With care for your home</h2>
+				<p>Prices from</p>
+				<p class="price">5.99<span>lv.</span></p>
+				<hr>
+				<p>Check it out below</p>
+				<p></p>
+				<img src="resources/arrow-black-bottom.png">
+			</div>
+			<div class="clearfix"></div>
+			
+		</section>
+
+		<section id="content">
+
+			<div id="content-wrapper">
+				<div class="advert-item">
+					<h3>Advert Title</h3>
+						<ul>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+						</ul>
+					<span class="price">5.99<span> lv.</span></span>
+					<button>Read more</button>
+				</div>
+				<div class="advert-item">
+					<h3>Advert Title</h3>
+						<ul>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+						</ul>
+					<span class="price">5.99<span> lv.</span></span>
+					<button>Read more</button>
+				</div>
+				<div class="advert-item">
+					<h3>Advert Title</h3>
+						<ul>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+						</ul>
+					<span class="price">5.99<span> lv.</span></span>
+					<button>Read more</button>
+				</div>
+				<div class="advert-item">
+					<h3>Advert Title</h3>
+						<ul>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+							<li>
+								<img src="resources/tick.png">
+								<p>Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							</li>
+						</ul>
+					<span class="price">5.99<span> lv.</span></span>
+					<button>Read more</button>
+				</div>
+				<div class="clearfix"></div>
+				<p class="small-text">All prices shown above are per apartment including VAT</p>
+			</div>
+
+		</section>
+
+		<section class="extra">
+			
+			<div class="extra-item">
+				<h3>More Information</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<button>More Information</button>
+			</div>
+			<div class="extra-item">
+				<h3>Contact Us</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<button>Contact Us</button>
+			</div>
+			<div class="clearfix"></div>
+
+		</section>
+
+		<footer>
+
+			<div class="footer-item fone">
+				<p class="brand">Brand</p>
+			</div>
+			<div class="footer-item fthree">
+				<p>Digital Book</p>
+				<p>Services</p>
+				<p>Contact Us</p>
+				<p>About Us</p>
+			</div>
+			<div class="footer-item">
+				<img src="resources/facebook.png">
+				<img src="resources/google.png">
+				<img src="resources/twitter.png">
+			</div>
+			
+			<div class="clearfix"></div>
+			<hr>
+			<p class="copyright">&copy; 2015 Brand Ltd.</p>
+
+		</footer>
+
+	</body>
+
+	<script type="text/javascript">
+
+		$( '#rm' ).toggle();
+
+		$( '#rmb' ).click( function() {
+			$( '#rm' ).toggle();
+		});
+
+		$( 'button.sign-in' ).click( function() {
+			$( '#rm' ).toggle();
+		});
+
+	</script>
+
+</html>
